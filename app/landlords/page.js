@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import StepList from "@/components/StepList";
 import CTASection from "@/components/CTASection";
 import GalleryGrid from "@/components/GalleryGrid";
@@ -79,8 +80,8 @@ export default function LandlordsPage() {
           </h2>
         </div>
         <div className="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {BENEFITS.map((benefit) => (
-            <div key={benefit.title} className="notch-br bg-ink p-8 text-cream">
+          {BENEFITS.map((benefit, i) => (
+            <FloatCard key={benefit.title} i={i} className="bg-ink p-8 text-cream">
               <div className="text-3xl">{benefit.icon}</div>
               <h3 className="mt-5 font-serif text-xl font-bold">
                 {benefit.title}
@@ -88,7 +89,7 @@ export default function LandlordsPage() {
               <p className="mt-3 text-sm leading-relaxed text-neutral-400">
                 {benefit.text}
               </p>
-            </div>
+            </FloatCard>
           ))}
         </div>
       </section>
@@ -111,7 +112,7 @@ export default function LandlordsPage() {
                 </li>
               ))}
             </ul>
-            <div className="notch-br mt-10 bg-card p-8">
+            <FloatCard i={1} className="mt-10 bg-card p-8">
               <h3 className="font-serif text-xl font-bold">
                 Property Portfolio
               </h3>
@@ -120,7 +121,7 @@ export default function LandlordsPage() {
                 surrounding regions — from shared supported houses to
                 semi-independent flats. See a selection of our homes below.
               </p>
-            </div>
+            </FloatCard>
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-coral">

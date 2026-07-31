@@ -52,9 +52,12 @@ export default function WhoWeAre() {
           {STATS.map((stat, i) => (
             <motion.div
               key={stat.label}
-              className={`notch-br p-7 ${stat.accent ? "bg-coral" : "bg-ink"}`}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className={`p-7 shadow-[0_18px_40px_rgba(12,13,13,0.2)] ${
+                stat.accent ? "bg-coral" : "bg-ink"
+              }`}
+              initial={{ opacity: 0, y: 40, rotate: 0 }}
+              whileInView={{ opacity: 1, y: 0, rotate: [-2.5, 2, -1.5, 3][i] }}
+              whileHover={{ rotate: 0, scale: 1.02 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >

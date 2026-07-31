@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
@@ -82,7 +83,7 @@ export default function CommunityPage() {
         </div>
         <div className="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2">
           {OPPORTUNITIES.map((opp, i) => (
-            <div key={opp.title} className="notch-br bg-card p-8">
+            <FloatCard key={opp.title} i={i} className="bg-card p-8">
               <span className="font-serif text-4xl font-bold text-coral">
                 {String(i + 1).padStart(2, "0")}
               </span>
@@ -92,7 +93,7 @@ export default function CommunityPage() {
               <p className="mt-3 text-sm leading-relaxed text-neutral-400">
                 {opp.text}
               </p>
-            </div>
+            </FloatCard>
           ))}
         </div>
       </section>

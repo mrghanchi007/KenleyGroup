@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
@@ -79,8 +80,8 @@ export default function ServicesPage() {
 
       <section className="px-6 pb-24">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service) => (
-            <div key={service.title} className="notch-br bg-ink p-8 text-cream">
+          {SERVICES.map((service, i) => (
+            <FloatCard key={service.title} i={i} className="bg-ink p-8 text-cream">
               <div className="text-4xl">{service.icon}</div>
               <h2 className="mt-5 font-serif text-2xl font-bold">
                 {service.title}
@@ -93,7 +94,7 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </FloatCard>
           ))}
         </div>
       </section>

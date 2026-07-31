@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import CTASection from "@/components/CTASection";
 import GalleryGrid from "@/components/GalleryGrid";
 
@@ -77,7 +78,7 @@ export default function AboutPage() {
       {/* Mission / Vision / Purpose */}
       <section className="diag-bottom bg-ink px-6 pb-36 pt-24 text-cream">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          <div className="notch-br bg-card p-8">
+          <FloatCard i={0} className="bg-card p-8">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-coral">
               Mission
             </p>
@@ -86,8 +87,8 @@ export default function AboutPage() {
               individuals to develop independence, confidence and life skills
               needed for successful adulthood.
             </p>
-          </div>
-          <div className="notch-br bg-card p-8">
+          </FloatCard>
+          <FloatCard i={1} className="bg-card p-8">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-coral">
               Vision
             </p>
@@ -96,8 +97,8 @@ export default function AboutPage() {
               accommodation, meaningful support and opportunities to thrive
               independently.
             </p>
-          </div>
-          <div className="notch-br bg-card p-8">
+          </FloatCard>
+          <FloatCard i={2} className="bg-card p-8">
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-coral">
               Core Purpose
             </p>
@@ -105,7 +106,7 @@ export default function AboutPage() {
               Transforming lives through housing, support and social
               innovation.
             </p>
-          </div>
+          </FloatCard>
         </div>
       </section>
 
@@ -120,13 +121,13 @@ export default function AboutPage() {
           </h2>
         </div>
         <div className="mx-auto mt-14 grid max-w-4xl grid-cols-2 gap-5 md:grid-cols-3">
-          {VALUES.map((value) => (
-            <div key={value.title} className="notch-br bg-ink p-7 text-center">
+          {VALUES.map((value, i) => (
+            <FloatCard key={value.title} i={i} className="bg-ink p-7 text-center">
               <div className="text-3xl">{value.icon}</div>
               <p className="mt-4 font-serif text-xl font-bold text-cream">
                 {value.title}
               </p>
-            </div>
+            </FloatCard>
           ))}
         </div>
       </section>
@@ -142,7 +143,7 @@ export default function AboutPage() {
           </h2>
         </div>
         <div className="mx-auto mt-14 grid max-w-3xl gap-6 md:grid-cols-2">
-          <div className="notch-br bg-ink p-8 text-center text-cream">
+          <FloatCard i={0} className="bg-ink p-8 text-center text-cream">
             <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-coral font-serif text-3xl font-bold text-ink">
               AK
             </div>
@@ -150,8 +151,8 @@ export default function AboutPage() {
             <p className="mt-1 text-xs uppercase tracking-[0.2em] text-coral">
               Chief Executive Officer
             </p>
-          </div>
-          <div className="notch-br bg-ink p-8 text-center text-cream">
+          </FloatCard>
+          <FloatCard i={1} className="bg-ink p-8 text-center text-cream">
             <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-coral font-serif text-3xl font-bold text-ink">
               GD
             </div>
@@ -159,7 +160,7 @@ export default function AboutPage() {
             <p className="mt-1 text-xs uppercase tracking-[0.2em] text-coral">
               Chairman
             </p>
-          </div>
+          </FloatCard>
         </div>
         <p className="mx-auto mt-10 max-w-2xl text-center leading-relaxed text-neutral-600">
           Behind our leadership sits a dedicated team of senior managers,
@@ -171,7 +172,7 @@ export default function AboutPage() {
       {/* Social Innovation + Compliance */}
       <section className="diag-bottom bg-ink px-6 pb-36 pt-24 text-cream">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          <div className="notch-br bg-card p-8">
+          <FloatCard i={0} className="bg-card p-8">
             <div className="text-3xl">🚀</div>
             <h3 className="mt-5 font-serif text-2xl font-bold">
               Social Innovation
@@ -182,8 +183,8 @@ export default function AboutPage() {
               projects that help our residents build networks, skills and
               opportunities beyond their front door.
             </p>
-          </div>
-          <div className="notch-br bg-card p-8">
+          </FloatCard>
+          <FloatCard i={1} className="bg-card p-8">
             <div className="text-3xl">📋</div>
             <h3 className="mt-5 font-serif text-2xl font-bold">
               Regulation &amp; Compliance
@@ -201,7 +202,7 @@ export default function AboutPage() {
               loading="lazy"
               className="mt-6 h-16 w-auto rounded-md"
             />
-          </div>
+          </FloatCard>
         </div>
 
         {/* Areas covered */}

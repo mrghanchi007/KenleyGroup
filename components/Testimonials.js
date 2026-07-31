@@ -39,9 +39,10 @@ export default function Testimonials() {
         {QUOTES.map((quote, i) => (
           <motion.blockquote
             key={quote.author}
-            className="notch-bl bg-ink p-8 text-cream"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="bg-ink p-8 text-cream shadow-[0_18px_40px_rgba(12,13,13,0.2)]"
+            initial={{ opacity: 0, y: 40, rotate: 0 }}
+            whileInView={{ opacity: 1, y: 0, rotate: [-2, 1.5, -1.5][i] }}
+            whileHover={{ rotate: 0, scale: 1.01 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >

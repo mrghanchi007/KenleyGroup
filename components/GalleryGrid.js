@@ -29,11 +29,15 @@ export default function GalleryGrid({ photos, cols = 3 }) {
       {photos.map((photo, i) => (
         <motion.div
           key={photo.src}
-          className={`${
-            photo.notch || "notch-br"
-          } aspect-[4/3] overflow-hidden bg-ink`}
+          className="aspect-[4/3] overflow-hidden bg-ink shadow-[0_18px_40px_rgba(12,13,13,0.25)]"
           initial={initialFor(i)}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            rotate: [-2, 1.5, 2, -1.5, 2.5, -2.5][i % 6],
+          }}
+          whileHover={{ rotate: 0, scale: 1.02 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65, ease: "easeOut", delay: (i % cols) * 0.08 }}
         >

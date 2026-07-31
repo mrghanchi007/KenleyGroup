@@ -51,9 +51,10 @@ export default function Network() {
         {CARDS.map((card, i) => (
           <motion.div
             key={card.title}
-            className="notch-br bg-ink p-8 text-cream"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="bg-ink p-8 text-cream shadow-[0_18px_40px_rgba(12,13,13,0.25)]"
+            initial={{ opacity: 0, y: 40, rotate: 0 }}
+            whileInView={{ opacity: 1, y: 0, rotate: [-2.5, 2, -2][i] }}
+            whileHover={{ rotate: 0, scale: 1.02 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: i * 0.12 }}
           >

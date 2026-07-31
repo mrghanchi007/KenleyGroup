@@ -52,7 +52,7 @@ export default function Header({ showBadge }) {
       {showBadge && (
         <div className="pointer-events-none fixed left-1/2 top-[-85px] z-[60] h-[150px] w-[150px] -translate-x-1/2">
           <div className="flex h-full w-full flex-col items-center justify-end rounded-full bg-ink pb-4 text-center text-cream">
-            <p className="translate-y-[5px] font-serif text-[20px] font-bold leading-[0.95]">
+            <p className="translate-y-[3px] font-serif text-[20px] font-bold leading-[0.95]">
               Kenley
               <br />
               Group

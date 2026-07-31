@@ -56,11 +56,21 @@ export default function FAQSection() {
           return (
             <motion.div
               key={faq.q}
-              className="notch-br bg-ink text-cream"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, rotate: 0 }}
+              whileInView={{ opacity: 1, y: 0, rotate: i % 2 === 0 ? -1.3 : 1.3 }}
+              whileHover={{ rotate: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
+            >
+            <motion.div
+              className="bg-ink text-cream shadow-[0_16px_35px_rgba(12,13,13,0.18)]"
+              animate={{ y: [0, -6, 0] }}
+              transition={{
+                duration: 4 + i * 0.4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.3,
+              }}
             >
               <button
                 onClick={() => setOpenIndex(open ? -1 : i)}
@@ -92,6 +102,7 @@ export default function FAQSection() {
                   </motion.div>
                 )}
               </AnimatePresence>
+            </motion.div>
             </motion.div>
           );
         })}

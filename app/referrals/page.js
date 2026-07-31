@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import StepList from "@/components/StepList";
 import CTASection from "@/components/CTASection";
 
@@ -58,7 +59,7 @@ export default function ReferralsPage() {
       {/* Who we support + criteria */}
       <section className="px-6 pb-24">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          <div className="notch-br bg-ink p-8 text-cream">
+          <FloatCard i={0} className="bg-ink p-8 text-cream">
             <h2 className="font-serif text-2xl font-bold">Who We Support</h2>
             <ul className="mt-5 space-y-3 text-sm leading-relaxed text-neutral-300">
               {WHO_WE_SUPPORT.map((item) => (
@@ -68,8 +69,8 @@ export default function ReferralsPage() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="notch-br bg-ink p-8 text-cream">
+          </FloatCard>
+          <FloatCard i={1} className="bg-ink p-8 text-cream">
             <h2 className="font-serif text-2xl font-bold">
               Referral Criteria
             </h2>
@@ -82,14 +83,14 @@ export default function ReferralsPage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FloatCard>
         </div>
       </section>
 
       {/* Specialist provision */}
       <section className="px-6 pb-24">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          <div className="notch-br bg-coral p-8">
+          <FloatCard i={3} className="bg-coral p-8">
             <div className="text-3xl">🎓</div>
             <h3 className="mt-4 font-serif text-2xl font-bold text-ink">
               Care Leavers
@@ -100,8 +101,8 @@ export default function ReferralsPage() {
               accommodation with life skills, education and employment support
               tailored to each young person&apos;s pathway plan.
             </p>
-          </div>
-          <div className="notch-br bg-coral p-8">
+          </FloatCard>
+          <FloatCard i={1} className="bg-coral p-8">
             <div className="text-3xl">🌍</div>
             <h3 className="mt-4 font-serif text-2xl font-bold text-ink">
               Unaccompanied Asylum Seeking Children
@@ -112,7 +113,7 @@ export default function ReferralsPage() {
               where appropriate — working closely with local authority teams
               throughout.
             </p>
-          </div>
+          </FloatCard>
         </div>
       </section>
 
@@ -148,7 +149,7 @@ export default function ReferralsPage() {
               </span>
             ))}
           </div>
-          <div className="notch-br mx-auto mt-14 max-w-2xl bg-card p-8 text-left">
+          <FloatCard i={1} className="mx-auto mt-14 max-w-2xl bg-card p-8 text-left">
             <h3 className="font-serif text-2xl font-bold">
               Local Authority Commissioning
             </h3>
@@ -160,7 +161,7 @@ export default function ReferralsPage() {
               to discuss commissioning requirements or to request our service
               specification.
             </p>
-          </div>
+          </FloatCard>
         </div>
       </section>
 

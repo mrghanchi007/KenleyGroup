@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
@@ -50,8 +51,8 @@ export default function CareersPage() {
 
       <section className="px-6 pb-24">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          {ROLES.map((role) => (
-            <div key={role.title} className="notch-br bg-ink p-8 text-cream">
+          {ROLES.map((role, i) => (
+            <FloatCard key={role.title} i={i} className="bg-ink p-8 text-cream">
               <div className="text-3xl">{role.icon}</div>
               <h2 className="mt-5 font-serif text-2xl font-bold">
                 {role.title}
@@ -59,11 +60,11 @@ export default function CareersPage() {
               <p className="mt-3 text-sm leading-relaxed text-neutral-400">
                 {role.text}
               </p>
-            </div>
+            </FloatCard>
           ))}
         </div>
 
-        <div className="notch-br mx-auto mt-12 max-w-5xl bg-coral p-8 md:p-10">
+        <FloatCard i={1} className="mx-auto mt-12 max-w-5xl bg-coral p-8 md:p-10">
           <h2 className="font-serif text-2xl font-bold text-ink">
             Why Work With Us
           </h2>
@@ -75,7 +76,7 @@ export default function CareersPage() {
               </li>
             ))}
           </ul>
-        </div>
+        </FloatCard>
       </section>
 
       <CTASection

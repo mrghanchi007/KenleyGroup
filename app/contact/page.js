@@ -1,5 +1,6 @@
 import PageShell from "@/components/PageShell";
 import PageHero from "@/components/PageHero";
+import FloatCard from "@/components/FloatCard";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
@@ -22,7 +23,7 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[1fr_1.3fr]">
           {/* Contact details */}
           <div className="space-y-6">
-            <div className="notch-br bg-ink p-8 text-cream">
+            <FloatCard i={0} className="bg-ink p-8 text-cream">
               <h2 className="font-serif text-2xl font-bold">Get In Touch</h2>
               <ul className="mt-6 space-y-5 text-sm">
                 <li>
@@ -62,8 +63,8 @@ export default function ContactPage() {
                   </p>
                 </li>
               </ul>
-            </div>
-            <div className="notch-br bg-coral p-8">
+            </FloatCard>
+            <FloatCard i={1} className="bg-coral p-8">
               <h3 className="font-serif text-xl font-bold text-ink">
                 Company Registration
               </h3>
@@ -74,7 +75,7 @@ export default function ContactPage() {
                 <br />
                 Company Number: 13871236
               </p>
-            </div>
+            </FloatCard>
           </div>
 
           {/* Form */}
