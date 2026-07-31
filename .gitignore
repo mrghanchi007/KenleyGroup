@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.env*
+*.log
+
+# Local reference material — never push to git
+/Temp/
+*.mp4

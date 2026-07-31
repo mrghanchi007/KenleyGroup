@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-beige text-ink font-sans antialiased;
+  overflow-x: hidden;
+}
+
+/* Fullscreen menu panel — near full width on mobile, diagonal panel on desktop */
+.menu-panel {
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+}
+
+@media (min-width: 768px) {
+  .menu-panel {
+    clip-path: polygon(0 0, 70% 0, 52% 100%, 0 100%);
+  }
+}
+
+/* Notched (cut) corners — bottom-right */
+.notch-br {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 26px),
+    calc(100% - 26px) 100%,
+    0 100%
+  );
+}
+
+/* Notched corner — bottom-left */
+.notch-bl {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    26px 100%,
+    0 calc(100% - 26px)
+  );
+}
+
+/* Small notch for the menu button */
+.notch-sm {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%
+  );
+}
+
+/* Diagonal section edges */
+.diag-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+}
+
+.diag-top {
+  clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+}
