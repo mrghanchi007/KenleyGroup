@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ForgetfulArrow } from "./FunFx";
 import GalleryGrid from "./GalleryGrid";
 
 const PHOTOS = [
@@ -51,9 +52,7 @@ export default function HomesGallery() {
           className="group inline-flex items-center gap-2 border-b border-coral pb-1 text-sm font-medium uppercase tracking-[0.2em]"
         >
           Explore the Portfolio
-          <span className="transition-transform group-hover:translate-x-1">
-            &rarr;
-          </span>
+          <ForgetfulArrow />
         </Link>
       </div>
     </section>

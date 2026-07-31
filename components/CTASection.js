@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { JiggleText, ForgetfulArrow } from "./FunFx";
 
 export default function CTASection({ watermark, title, text, buttons }) {
   return (
@@ -28,12 +29,10 @@ export default function CTASection({ watermark, title, text, buttons }) {
             <Link
               key={btn.label}
               href={btn.href}
-              className="notch-br group inline-flex items-center gap-3 bg-ink px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-cream"
+              className="notch-br inline-flex items-center gap-3 bg-ink px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-cream"
             >
-              {btn.label}
-              <span className="transition-transform group-hover:translate-x-1">
-                &rarr;
-              </span>
+              <JiggleText text={btn.label} />
+              <ForgetfulArrow />
             </Link>
           ))}
         </div>

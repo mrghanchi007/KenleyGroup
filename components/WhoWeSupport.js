@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ForgetfulArrow } from "./FunFx";
 
 /*
   Scattered "polaroid" layout — each card sits at a slightly random
@@ -115,9 +116,7 @@ export default function WhoWeSupport() {
             className="group mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink"
           >
             Make a Referral
-            <span className="transition-transform group-hover:translate-x-1">
-              &rarr;
-            </span>
+            <ForgetfulArrow />
           </Link>
         </motion.div>
       </div>

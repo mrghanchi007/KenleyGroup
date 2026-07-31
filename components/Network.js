@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ForgetfulArrow } from "./FunFx";
 
 const CARDS = [
   {
@@ -68,9 +69,7 @@ export default function Network() {
               className="group mt-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-coral"
             >
               Learn More
-              <span className="transition-transform group-hover:translate-x-1">
-                &rarr;
-              </span>
+              <ForgetfulArrow />
             </Link>
           </motion.div>
         ))}

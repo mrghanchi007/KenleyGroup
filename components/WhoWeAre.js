@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ForgetfulArrow } from "./FunFx";
 
 const STATS = [
   { value: "24/7", label: "Emergency Support" },
@@ -42,9 +43,7 @@ export default function WhoWeAre() {
             className="group mt-8 inline-flex items-center gap-2 border-b border-coral pb-1 text-sm font-medium uppercase tracking-[0.2em]"
           >
             Read Our Story
-            <span className="transition-transform group-hover:translate-x-1">
-              &rarr;
-            </span>
+            <ForgetfulArrow />
           </Link>
         </motion.div>
 

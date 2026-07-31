@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { JiggleText, ForgetfulArrow } from "./FunFx";
 
 const inputClass =
   "w-full border border-neutral-400 bg-transparent px-4 py-3 text-sm text-ink placeholder-neutral-500 outline-none transition-colors focus:border-ink";
@@ -87,12 +88,10 @@ export default function ContactForm() {
       />
       <button
         type="submit"
-        className="notch-br group inline-flex items-center gap-3 bg-ink px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-cream"
+        className="notch-br inline-flex items-center gap-3 bg-ink px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-cream"
       >
-        Send Message
-        <span className="transition-transform group-hover:translate-x-1">
-          &rarr;
-        </span>
+        <JiggleText text="Send Message" />
+        <ForgetfulArrow />
       </button>
     </form>
   );
