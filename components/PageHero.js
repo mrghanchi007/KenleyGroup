@@ -8,7 +8,7 @@ export default function PageHero({ label, title, text, watermark }) {
       {watermark && (
         <span
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 select-none whitespace-nowrap font-serif text-[16vw] font-bold leading-none text-[#c5bfae]/50"
+          className="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 select-none whitespace-nowrap font-serif text-[16vw] font-bold leading-none text-[#c3b8ad]/50"
         >
           {watermark}
         </span>

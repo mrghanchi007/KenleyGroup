@@ -9,7 +9,7 @@ export default function CTASection({ watermark, title, text, buttons }) {
       {/* Faint echo of the heading behind */}
       <span
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-16 -translate-x-1/2 select-none whitespace-nowrap font-serif text-[11vw] font-bold text-[#d47f6b]/70"
+        className="pointer-events-none absolute left-1/2 top-16 -translate-x-1/2 select-none whitespace-nowrap font-serif text-[11vw] font-bold text-[#d68a70]/70"
       >
         {watermark || title}
       </span>

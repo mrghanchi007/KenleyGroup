@@ -31,11 +31,11 @@ export default function Preloader({ onFinish }) {
   return (
     <motion.div
       className="fixed inset-0 z-[100] flex items-center justify-center"
-      initial={{ backgroundColor: "rgba(216,211,198,1)" }}
+      initial={{ backgroundColor: "rgba(216,207,198,1)" }}
       animate={
         step === 2
-          ? { backgroundColor: "rgba(216,211,198,0)" }
-          : { backgroundColor: "rgba(216,211,198,1)" }
+          ? { backgroundColor: "rgba(216,207,198,0)" }
+          : { backgroundColor: "rgba(216,207,198,1)" }
       }
       transition={{ duration: 0.55, delay: step === 2 ? 0.3 : 0 }}
       style={{ pointerEvents: step === 2 ? "none" : "auto" }}

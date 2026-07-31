@@ -56,7 +56,7 @@ export default function Hero({ show }) {
       {/* Giant "Kenley" watermark behind everything */}
       <motion.span
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[38%] select-none font-serif text-[26vw] font-bold leading-none text-[#c5bfae]/60"
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[38%] select-none font-serif text-[26vw] font-bold leading-none text-[#c3b8ad]/60"
         initial={{ opacity: 0 }}
         animate={show ? { opacity: 1 } : {}}
         transition={{ delay: 0.55, duration: 1 }}

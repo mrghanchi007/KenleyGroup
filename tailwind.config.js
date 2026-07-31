@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        beige: "#D8D3C6",
-        ink: "#100F0D",
-        coral: "#E28D77",
+        beige: "#D8CFC6",
+        ink: "#0C0D0D",
+        coral: "#E69C85",
         cream: "#EFEAE0",
         card: "#161513",
       },
